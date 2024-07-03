@@ -1,0 +1,11 @@
+header {
+    position: relative;
+    top: 0px;
+    color: white;
+    background-color: black;
+    font-size: 4rem;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 1% 0%;
+}

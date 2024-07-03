@@ -1,0 +1,34 @@
+.clock-block {
+    font-size: 25%;
+    text-transform:none;
+    padding: 0px;
+    margin: 0px;
+    font-family:monospace;
+
+
+    .time {
+        
+        font-size: 115%;
+        color:burlywood;
+    }
+
+    .quote {
+        font-size: 140%;
+        font-style: none;
+    }
+}
+
+.first-line {
+    margin-top: 1%;
+    margin-bottom: 0.5%;
+    font-weight: bold;
+}
+
+.second-line {
+    font-family:monospace;
+    color:bisque;
+    opacity: 0.6;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 0.4%;
+}

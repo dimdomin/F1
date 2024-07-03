@@ -1,0 +1,126 @@
+.inner-content{
+    display: grid;
+    height: 100%;
+    width: 100%;
+
+    grid-template-areas: 
+    "temperature city city weather-icon"
+    "temperature list2 list2 weather-icon"
+    "list1 list1 icon-sunrise sunrise"
+  
+    "list1 list1 icon-sunset sunset"
+    
+    ;
+    /* grid-template-columns: 100px 100px 100px 100px; */
+}
+
+.inner-content > *{
+    /* background-color: red; */
+    /* border: 1px solid black; */
+
+    color: bisque;
+    padding: 0px;
+    margin: 0px;
+    height: fit-content;
+    width:fit-content;
+    /* place-self: center; */
+    ;
+    /* height: 10%;
+    width:100%; */
+}
+
+.list1 {
+    grid-area: list1;
+}
+
+.list2 {
+    grid-area: list2;
+    padding-left: 5%;
+}
+
+.list1, .list2 {
+    list-style-type: none;
+    width: 90%;
+    height: 90%;
+    > li {
+        text-align: left;
+        list-style-type: none;
+        > p {
+            
+            margin: 0% 0% 5% 10%;
+            font-size: 70%;
+        }
+    }
+}
+
+.sunset-icon {
+    width: 60%;
+    height: 50%;
+    grid-area: icon-sunset;
+    place-self: center;
+    background-color: bisque;
+    border-radius: 10px;
+}
+
+.sunrise-icon {
+    width: 60%;
+    height: 50%;
+    grid-area: icon-sunrise;
+    place-self: center;
+    background-color: bisque;
+    border-radius: 10px;
+}
+
+.weather-icon{
+    grid-area: weather-icon;
+    height: 70%;
+    width: auto;
+    justify-self: center;
+    background-color: bisque;
+    border-radius: 30px;
+}
+
+.temperature{
+    grid-area: temperature;
+    font-size: 350%;
+    /* height: auto; */
+    align-self:center;
+    font-weight: bold;
+    padding-left: 10%;    
+}
+
+.humidity{
+    grid-area: humidity;
+
+}
+.wind-speed{
+    grid-area: wind;
+
+}
+.pressure{
+    grid-area: pressure;
+ 
+}
+.city{
+    grid-area: city;
+    align-self: center;
+    justify-self: center;
+    font-size: 130%;
+    padding-left: 5%;
+}
+.description{
+    grid-area: description;
+    align-self: center;
+}
+.feels-like{
+    grid-area: feels-like;
+    align-self: center;
+}
+.sunrise{
+    grid-area: sunrise;
+    align-self: center;
+}
+.sunset{
+    grid-area: sunset;
+    align-self: center;
+}

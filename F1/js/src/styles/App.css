@@ -1,0 +1,52 @@
+html, body {
+    padding: 0px;
+    margin: 0px;
+}
+
+#root {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+@keyframes scrollBg {
+    from {
+      transform: translateX(0px);
+    }
+    to {
+      transform: translateX(-2121px);
+    }
+  }
+
+.background {
+    display: flex;
+    position: relative; 
+    height: 100%;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    
+    /* background-color: yellow; */
+    /* z-index: -1; */
+
+    overflow: hidden;
+}
+
+
+.background-image {
+    background-image: url("https://img.razrisyika.ru/kart/33/1200/131689-pogoda-14.jpg");
+    background-repeat: repeat-x; 
+    position: absolute;
+    width: 4242px;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.3;
+    animation: scrollBg 200s linear infinite;
+
+}

@@ -1,0 +1,57 @@
+.objects {
+    display: grid;
+    grid-template-areas: 
+    "fd-date fd-desc fd-temp fd-icon"
+    ;
+    align-items: center;
+    justify-items: center;
+    font-size: 100%;
+    border-bottom: 1px solid bisque;
+
+    > * {
+        margin: 0px;
+        padding: 0px;
+        height: fit-content;
+    }
+}
+
+.objects:last-child{
+    border: none;
+    
+}
+
+.five-day-city{
+    margin: 0px;
+    padding: 0px;
+    font-weight: bold;
+    font-size: 90%;
+    border-bottom: 1px solid bisque;
+    
+}
+
+.five-days-date{
+    grid-area: fd-date;
+    font-size: 90%;
+}
+
+.five-days-description{
+    font-size: 80%;
+    grid-area: fd-desc;
+    
+}
+
+.five-days-description::first-letter{
+    text-transform: uppercase;
+}
+
+.five-days-temp{
+    grid-area: fd-temp;
+}
+
+
+
+.five-days-icon{
+    height: 100%;
+    width: 40%;
+    grid-area: fd-icon;
+}

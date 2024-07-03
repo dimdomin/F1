@@ -1,0 +1,242 @@
+.page-container {
+    position: absolute;
+    border: 1px solid rgba(255, 255, 255, 1);
+    top: 18%;    
+    border-radius: 5px;
+    /* add different top for TABLET and PHONE screen size */
+    margin: 5% 15% 5%;
+    
+    padding: 1% 5% 3%;
+    height:20%;
+    width: 60%;
+
+    box-shadow: 0px 5px 30px 5px black,
+    0px -1px 1px 0px black;
+
+    display: grid;
+    
+    /* grid-template-columns: 20% 20%; */
+    gap: 1%;
+    grid-template-areas:
+        "header header header"    
+        "input button-now button-fife-day"
+        "loading loading loading"
+        "main-content main-content main-content"
+        "greeting greeting greeting"
+        ;
+    align-content: start;
+    justify-content:center;
+    justify-items: center;
+    /* align-items: center; */
+    background-color: cornsilk;
+    /* top: 0px;
+    right: 0px; */
+
+}
+
+
+.instruction {
+    text-align: center;
+    font-family:Georgia, "Times New Roman", Times, serif;
+    width: 115%;
+    grid-area: header;
+    font-size: 1.5vw;
+    max-height: 50px;
+    margin: 2% 2% 1%;
+
+}
+
+.input {
+    grid-area: input;
+    font-family:Georgia, "Times New Roman", Times, serif;
+    text-transform: uppercase;
+    font-size:0.8vw;
+    font-weight: bold;
+
+    background-color: black;
+    color: bisque;
+
+    border-radius: 25px;
+    box-shadow: 5px 5px 10px -1px black;
+    cursor: pointer;
+    border: 2px solid black;
+
+    transition: 0.5s ease-out;
+    text-align: center;
+
+    margin: 0% 2%;
+    padding: 2% 2%;
+    width: 100%;
+    max-width: 170px;
+    /* height: auto; */
+    height: 110%;
+    max-height: 35px;
+}
+
+.button {
+    font-family:Georgia, "Times New Roman", Times, serif;
+    text-transform: uppercase;
+    font-size:1.0vw;
+    font-weight: bold;
+
+    background-color: black;
+    color: bisque;
+
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px -1px black;
+    cursor: pointer;
+    border: 2px solid black;
+
+    transition: 0.5s ease-out;
+
+    margin-right: 5%;
+    margin-left: 5%;
+    padding: 2% 1%;
+    width: 95%;
+    max-width: 280px;
+    /* height: auto; */
+    height: 140%;
+    max-height: 45px;
+    
+}
+
+
+
+.button:hover {
+    transition: all 0.5s ease-out, background-color 0.1s, color 0.1s, box-shadow 0.1s, transform 0.1s;
+    
+    color:burlywood;
+    transform: scale(105%);
+    box-shadow: 15px 20px 20px 1px black,
+    inset 1px -1px 20px bisque;
+}
+
+.button:active {
+    color: black;
+    background-color: lightgreen;
+    box-shadow: 13px 20px 18px -5px black,
+    inset 1px -1px 20px bisque;
+    transform: scale(101%);
+}
+
+.now {
+    grid-area: button-now;
+}
+
+.fife-days {
+    grid-area: button-fife-day;
+}
+
+.content-container {
+    display: none;
+    opacity: 0;
+    grid-area: main-content;
+    
+    justify-self: center;
+    text-align: center;
+
+    width: 100vw;
+    max-width: 800px;
+    height: 90%;
+
+    margin: 4% 1% 1%;
+    padding: 2%;
+
+    /* border: px solid bisque; */
+    background-color: black;
+    color: bisque;
+    border-radius:15px;
+    
+    font-size: 2vw;
+}
+
+.one-day{
+    display: none;
+    width: 42vw;
+    max-width: 800px;
+    height: 90%;
+    margin-bottom: -30px;
+}
+
+.five-days{
+    display: none;
+    width: 50vw;
+    max-width: 680px;
+    height: 90%;
+    margin-bottom: -1%;
+}
+
+
+/* LOAD ANIMATION */
+.lds-ellipsis {
+    place-self: center;
+    /* align-self: center;
+    justify-self: center; */
+    grid-area: loading;
+    display: none;
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    z-index: 1;
+    top: 10%;
+  }
+  .lds-ellipsis div {
+    position: absolute;
+    top: 33px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: black;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+  }
+  .lds-ellipsis div:nth-child(1) {
+    left: 8px;
+    animation: lds-ellipsis1 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(2) {
+    left: 8px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(3) {
+    left: 32px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(4) {
+    left: 56px;
+    animation: lds-ellipsis3 0.6s infinite;
+  }
+  @keyframes lds-ellipsis1 {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes lds-ellipsis3 {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+  @keyframes lds-ellipsis2 {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(24px, 0);
+    }
+  }
+  
+
+  .greeting {
+    grid-area: greeting;
+    display: none;
+    padding: 2%;
+    margin:0px;
+    color: black;
+    font-weight: bold;
+    font-style: italic;
+  }
